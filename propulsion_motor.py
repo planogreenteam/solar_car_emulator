@@ -7,17 +7,14 @@ class propulsionMotor(object):
         self.__voltage = 48
         self.__rpm = 0
 
-    def getCurrent(self):
+    @property
+    def current(self):
         return self.__current
 
-    def getVoltage(self):
+    @property
+    def voltage(self):
         return self.__voltage
 
-    def getRpm(self):
+    @property
+    def rpm(self):
         return self.__rpm
-
-    def __setCurrent(self, current):
-        self.__current = current
-
-    def __setRpm(self, rpm):
-        self.__rpm = rpm

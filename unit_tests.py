@@ -127,27 +127,27 @@ class testPropulsionMotor(unittest.TestCase):
         self.myMotor = None
 
     def testGetVoltage(self):
-        myVolts = self.myMotor.getVoltage()
+        myVolts = self.myMotor.voltage
         assert myVolts is not None, "volts is None"
 
     def testGetCurrent(self):
-        myAmps = self.myMotor.getCurrent()
+        myAmps = self.myMotor.current
         assert myAmps is not None, "amps is None"
 
     def testGetRpm(self):
-        myRpm = self.myMotor.getRpm()
+        myRpm = self.myMotor.rpm
         assert myRpm is not None
 
     def testSetCurrent(self):
         testAmps = 37
-        self.myMotor._propulsionMotor__setCurrent(testAmps)
-        myAmps = self.myMotor.getCurrent()
+        self.myMotor._propulsionMotor__current = testAmps
+        myAmps = self.myMotor.current
         assert myAmps == testAmps,"input amps not equal to output amps"
 
     def testSetRpm(self):
         testRpm = 1000
-        self.myMotor._propulsionMotor__setRpm(testRpm)
-        myRpm = self.myMotor.getRpm()
+        self.myMotor._propulsionMotor__rpm = testRpm
+        myRpm = self.myMotor.rpm
         assert myRpm == testRpm,"input rpm not equal to output rpm"
 
 class testMppt(unittest.TestCase):
