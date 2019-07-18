@@ -2,10 +2,9 @@
 
 class motorController(object):
     def __init__(self):
-        self.__maxAmps = 200
+        self.maxAmps = 200
         self.__state = "OK"
-        self.__capacity = 4 #Ah
 
     @property
-    def maxAmps(self):
-        return self.__maxAmps
+    def state(self):
+        return self.__state

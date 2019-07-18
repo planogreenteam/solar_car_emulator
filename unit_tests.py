@@ -51,6 +51,10 @@ class testMotorController(unittest.TestCase):
         myMax = self.myMc.maxAmps
         assert myMax == testMaxAmps, "max amps input does not match output"
 
+    def testGetState(self):
+        myState = self.myMc.state
+        assert myState is not None
+
 class testPanelArray(unittest.TestCase):
     def setUp(self):
         self.myPanels = panelArray()
