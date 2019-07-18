@@ -63,23 +63,23 @@ class testPanelArray(unittest.TestCase):
         self.myPanels = None
 
     def testGetVoltage(self):
-        myVolts = self.myPanels.getVoltage()
+        myVolts = self.myPanels.voltage
         assert myVolts is not None, "voltage is none"
 
     def testGetCurrent(self):
-        myCurrent = self.myPanels.getCurrent()
+        myCurrent = self.myPanels.current
         assert myCurrent is not None, "current is none"
 
     def testSetVoltage(self):
         testVolts = 33
-        self.myPanels._panelArray__setVoltage(testVolts)
-        myVolts = self.myPanels.getVoltage()
+        self.myPanels._panelArray__voltage = testVolts
+        myVolts = self.myPanels.voltage
         assert myVolts == testVolts, "input volts does not equal output volts"
 
     def testSetCurrent(self):
         testCurrent = 7
-        self.myPanels._panelArray__setCurrent(testCurrent)
-        myCurrent = self.myPanels.getCurrent()
+        self.myPanels._panelArray__current = testCurrent
+        myCurrent = self.myPanels.current
         assert myCurrent == testCurrent, "input current does not equal output current"
 
 class testPropulsionBattery(unittest.TestCase):

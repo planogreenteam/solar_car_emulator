@@ -5,14 +5,10 @@ class panelArray(object):
         self.__voltage = 48 # V
         self.__current = 8 # A
 
-    def getVoltage(self):
+    @property
+    def voltage(self):
         return self.__voltage
 
-    def getCurrent(self):
+    @property
+    def current(self):
         return self.__current
-
-    def __setVoltage(self,voltage):
-        self.__voltage = voltage
-
-    def __setCurrent(self,current):
-        self.__current = current
