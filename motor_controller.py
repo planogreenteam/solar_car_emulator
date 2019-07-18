@@ -6,8 +6,6 @@ class motorController(object):
         self.__state = "OK"
         self.__capacity = 4 #Ah
 
-    def getMaxAmps(self):
+    @property
+    def maxAmps(self):
         return self.__maxAmps
-
-    def setMaxAmps(self,maxAmps):
-        self.__maxAmps = maxAmps
