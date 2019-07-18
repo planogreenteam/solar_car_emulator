@@ -42,13 +42,13 @@ class testMotorController(unittest.TestCase):
         self.myMc = None
 
     def testGetMaxAmps(self):
-        myMaxAmps = self.myMc.getMaxAmps()
+        myMaxAmps = self.myMc.maxAmps
         assert myMaxAmps is not None, "max amps is None"
         
     def testSetMaxAmps(self):
         testMaxAmps = 200
-        self.myMc.setMaxAmps(testMaxAmps)
-        myMax = self.myMc.getMaxAmps()
+        self.myMc.maxAmpsx = testMaxAmps
+        myMax = self.myMc.maxAmps
         assert myMax == testMaxAmps, "max amps input does not match output"
 
 class testPanelArray(unittest.TestCase):
