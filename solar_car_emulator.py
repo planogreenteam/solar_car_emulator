@@ -1,7 +1,13 @@
 #!/usr/bin/python3
 import yaml
 import time
-print('Welcome to the Simple Learning Solar Car')
+
+import aux_battery
+import motor_controller
+import mppt
+import panel_array
+import propulsion_motor
+import propulsion_battery
 
 # setup
 
