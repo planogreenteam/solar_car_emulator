@@ -1,0 +1,12 @@
+main_battery:
+    max_voltage: 48
+    min_voltage: 38
+
+aux_battery:
+    max_voltage: 16
+    min_voltage: 13.1
+
+panel_array:
+    voltage: 48
+    min_amps: 0
+    max_amps: 8
