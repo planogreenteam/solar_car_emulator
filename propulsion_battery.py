@@ -7,20 +7,14 @@ class propulsionBattery(object):
         self.__capacity = 4 # Ah
         self.__current = 200 #A
 
-    def getVoltage(self):
+    @property
+    def voltage(self):
         return self.__voltage
 
-    def getCurrent(self):
+    @property
+    def current(self):
         return self.__current
 
-    def getCapacity(self):
+    @property
+    def capacity(self):
         return self.__capacity
-
-    def __setVoltage(self, voltage):
-        self.__voltage = voltage
-
-    def __setCurrent(self, current):
-        self.__current = current
-
-    def __setCapacity(self, capacity):
-        self.__capacity = capacity

@@ -90,33 +90,33 @@ class testPropulsionBattery(unittest.TestCase):
         self.myBat = None
 
     def testGetVoltage(self):
-        myVolts = self.myBat.getVoltage()
+        myVolts = self.myBat.voltage
         assert myVolts is not None, "volts was none"
 
     def testGetCurrent(self):
-        myAmps = self.myBat.getCurrent()
+        myAmps = self.myBat.current
         assert myAmps is not None, "amps was none"
 
     def testGetCapacity(self):
-        myCap = self.myBat.getCapacity()
+        myCap = self.myBat.capacity
         assert myCap is not None, "capacity was none"
 
     def testSetVoltage(self):
         testVolts = 31
-        self.myBat._propulsionBattery__setVoltage(testVolts)
-        myVolts = self.myBat.getVoltage()
+        self.myBat._propulsionBattery__voltage = testVolts
+        myVolts = self.myBat.voltage
         assert myVolts == testVolts, "input voltage not equal to output voltage"
 
     def testSetCurrent(self):
         testAmps = 122
-        self.myBat._propulsionBattery__setCurrent(testAmps)
-        myAmps = self.myBat.getCurrent()
+        self.myBat._propulsionBattery__current = testAmps
+        myAmps = self.myBat.current
         assert myAmps == testAmps, "input current not equal to output current"
 
     def testSetCapacity(self):
         testCap = 1.11111
-        self.myBat._propulsionBattery__setCapacity(testCap)
-        myCap = self.myBat.getCapacity()
+        self.myBat._propulsionBattery__capacity = testCap
+        myCap = self.myBat.capacity
         assert myCap == testCap, "input capacity not equal to output current"
 
 class testPropulsionMotor(unittest.TestCase):
