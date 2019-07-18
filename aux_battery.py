@@ -6,14 +6,15 @@ class auxBattery(object):
         self.__voltage = 14.4 #V
         self.__capacity = 3000 #mAh
 
-    def getVoltage(self):
+    @property
+    def voltage(self):
         return self.__voltage
 
-    def __setVoltage(self,voltage):
-        self.__voltage = voltage
-
-    def getCapacity(self):
+    @property
+    def capacity(self):
         return self.__capacity
 
-    def __setCapacity(self,capacity):
-        self.__capacity = capacity
+    @property
+    def capacity(self):
+        return self.__capacity
+

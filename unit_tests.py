@@ -15,23 +15,23 @@ class testAuxBattery(unittest.TestCase):
         self.myAux = None
 
     def testGetVoltage(self):
-        myVolts = self.myAux.getVoltage()
+        myVolts = self.myAux.voltage
         assert myVolts is not None, "voltage was None"
 
     def testSetVoltage(self):
         testVoltage = 11.2
-        self.myAux._auxBattery__setVoltage(testVoltage)
-        myVolts = self.myAux.getVoltage()
+        self.myAux._auxBattery__voltage = testVoltage
+        myVolts = self.myAux.voltage
         assert myVolts == testVoltage
 
     def testGetCapacity(self):
-        myCap = self.myAux.getCapacity()
+        myCap = self.myAux.capacity
         assert myCap is not None, "voltage was None"
 
     def testSetCapacity(self):
         testCap = 1000
-        self.myAux._auxBattery__setCapacity(testCap)
-        myCap = self.myAux.getCapacity()
+        self.myAux._auxBattery__capacity = testCap
+        myCap = self.myAux.capacity
         assert myCap == testCap, "input capacity did not equal output capacity"
 
 class testMotorController(unittest.TestCase):
